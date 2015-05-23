@@ -1,0 +1,18 @@
+<h1>Customers</h1>
+
+<a href="/customers/new">Add new customer</a>
+
+<table class="table table-striped">
+<thead>
+<tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>First name</th>
+    <th>Company</th>
+    <th>E-mail</th>
+    <th>VAT number</th>
+</tr></thead>
+<tbody>
+#TABLE#
+</tbody>
+</table>

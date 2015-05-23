@@ -1,0 +1,15 @@
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+              <span class="glyphicon glyphicon-globe"></span> <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" role="menu">
+              <li class="nl first"><a href="http://nl.el-way.eu/" class="language-link" lang="nl"><img class="language-icon" typeof="foaf:Image" src="/flags/nl.png" width="16" height="12" alt="Nederlands" title="Nederlands" /> Nederlands</a></li>
+              <li class="en"><a href="http://en.el-way.eu/" class="language-link" lang="en"><img class="language-icon" typeof="foaf:Image" src="/flags/en.png" width="16" height="12" alt="English" title="English" /> English</a></li>
+              <li class="fr"><a href="http://fr.el-way.eu/" class="language-link" lang="fr"><img class="language-icon" typeof="foaf:Image" src="/flags/fr.png" width="16" height="12" alt="Français" title="Français" /> Français</a></li>
+              <li class="de"><a href="http://de.el-way.eu/" class="language-link active" lang="de"><img class="language-icon" typeof="foaf:Image" src="/flags/de.png" width="16" height="12" alt="Deutsch" title="Deutsch" /> Deutsch</a></li>
+              <li class="hu last"><a href="http://hu.el-way.eu/" class="language-link" lang="hu"><img class="language-icon" typeof="foaf:Image" src="/flags/hu.png" width="16" height="12" alt="Magyar" title="Magyar" /> Magyar</a></li>
+            </ul>
+          </li>
+        </ul>
+

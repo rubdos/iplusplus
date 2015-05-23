@@ -1,0 +1,3 @@
+[submodule "mvcpp"]
+	path = mvcpp
+	url = https://github.com/rubdos/mvcpp.git

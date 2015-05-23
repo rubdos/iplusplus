@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+/*$grid-float-breakpoint: 991px;
+$navbar-default-link-hover-color: #6a960a;
+$navbar-default-link-active-color: #680a0a;
+$navbar-border-radius: 0px;
+@import "bootstrap-sprockets";
+@import "bootstrap";*/
+
+h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+h2,h3,h4,h5,h6 {
+    font-family: 'Lato', sans-serif;
+}
+li.leaf > a {
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+a.logo img {
+    margin-right: 15px;
+}
+
+#navbar {
+    margin-bottom: 0px;
+}
+
+.navbar-brand {
+    margin: 0;
+    padding-top: 10px;
+}
+.navbar.transparent.navbar-default {
+    background-color: rgba(248,248,248,0.7);
+    border-color: rgba(248,248,248,0.7);
+    border: none;
+}
+.btn-green {
+    color: #F8F8F8;
+    background-color: #4E9A06;
+    border-color: #3E8A00;
+    font-weight: bold;
+}
+.btn-green:hover {
+    color: white;
+    background-color: #5EAA16;
+}
+.align-right
+{
+    text-align: right;
+}
+.big-icon {
+    font-size: 10em;
+    text-align: center;
+//    color: #6a960a;
+}
+
+.footer {
+    background-color: #F8F8F8;
+}
