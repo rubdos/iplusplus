@@ -12,7 +12,9 @@ public:
     virtual void register_routes(mvcpp::router& r) override
     {
         r("/customers", &customer_controller::index);
-        r("/customers/:", &customer_controller::view);
+        r("/customers/lookup/json/:", &customer_controller::lookup_json);
+        r("/customers/view/:", &customer_controller::view);
+        r("/customers/get/json/:", &customer_controller::get_json);
         r("/customers/new", &customer_controller::insert);
         r.post("/customers/new", &customer_controller::insert_post);
     }
@@ -37,18 +39,53 @@ public:
 
             table += row.render() + "\n";
         }
+        if(customers.size() == 0)
+        {
+            table = "<tr><td colspan=\"6\" class=\"no-content\">No customers</td></tr>";
+        }
         page["TABLE"] = table;
         ctx->get_template().subview("PAGE") = page;
+    }
+    void get_json(mvcpp::context::ptr ctx)
+    {
+        auto c = customer::get(atol(ctx->get_parameter().c_str()));
+        ctx->response_header("Content-Type", "application/json");
+        if(c == nullptr)
+            return;
+        ctx->render(c->to_json());
     }
     void view(mvcpp::context::ptr ctx)
     {
         auto page = ctx->get_view("customer/view");
 
-        auto c = customer::get(atol(ctx->get_path().substr(11).c_str())); // This is not beautiful
+        auto c = customer::get(atol(ctx->get_parameter().c_str()));
+        if(c == nullptr)
+            return;
         page["CUSTOMER_NAME"] = c->name();
 
         ctx->get_template().subview("PAGE") = page;
     }
+    void lookup_json(mvcpp::context::ptr ctx)
+    {
+        auto query = ctx->get_parameter();
+        auto cs = customer::search(query);
+        ctx->response_header("Content-Type", "application/json");
+
+        std::string response = "[";
+        
+        for(auto c: cs)
+        {
+            response += "{\"name\": \"" + c->name() + "\", \"id\": " + std::to_string(c->id()) + "},";
+        }
+        if(cs.size() > 0)
+        {
+            response = response.substr(0, response.length() - 1);
+        }
+        response += "]";
+        
+        ctx->render(response);
+    }
+
     void insert(mvcpp::context::ptr ctx)
     {
         auto page = ctx->get_view("customer/new");
@@ -75,7 +112,7 @@ public:
                 }
             );
         std::stringstream url;
-        url << "/customers/" << c->id();
+        url << "/customers/view/" << c->id();
         ctx->response_header("Location", url.str());
         ctx->set_response_code(303);
         // Fields of customer:

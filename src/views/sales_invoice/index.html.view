@@ -1,0 +1,18 @@
+<h1>Sales Invoices</h1>
+
+<a href="/sales_invoices/new">Add new invoice</a>
+
+<table class="table table-striped">
+<thead>
+<tr>
+    <th>#</th>
+    <th>Customer</th>
+    <th>Total amount</th>
+    <th>Invoice date</th>
+    <th>Payed</th>
+</tr></thead>
+<tbody>
+#TABLE#
+</tbody>
+</table>
+

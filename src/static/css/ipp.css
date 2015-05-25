@@ -23,7 +23,7 @@ $navbar-border-radius: 0px;
 h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
-    text-transform: uppercase;
+    font-variant: small-caps;
 }
 h2,h3,h4,h5,h6 {
     font-family: 'Lato', sans-serif;
@@ -72,4 +72,8 @@ a.logo img {
 
 .footer {
     background-color: #F8F8F8;
+}
+.table > tbody > tr > td.no-content {
+    color: gray;
+    text-align: center;
 }

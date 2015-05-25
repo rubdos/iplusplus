@@ -1,0 +1,7 @@
+<tr>
+    <td><a href="/sales_invoices/view/#ID#">#NUMBER#</a></td>
+    <td><a href="/sales_invoices/view/#ID#">#CUSTOMER NAME#</a></td>
+    <td>&euro;0.00</td>
+    <td>#INVOICE DATE#</td>
+    <td>#PAYED#</td>
+</tr>

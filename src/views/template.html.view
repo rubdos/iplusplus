@@ -9,6 +9,8 @@
   <link rel="stylesheet" href="/css/ipp.css" type="text/css" />
   <script type="text/javascript" src="/js/jquery.min.js"></script>
   <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/js/bootstrap3-typeahead.min.js"></script>
+  <script type="text/javascript" src="/js/ipp.js"></script>
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css' />
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
 </head>

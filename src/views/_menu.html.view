@@ -1,5 +1,5 @@
         <ul class="menu nav navbar-nav">
           <li class="first leaf active"><a href="/" class="active">Dashboard</a></li>
           <li class="leaf"><a href="/customers">Customers</a></li>
-          <li class="leaf"><a href="/orders">Orders</a></li>
+          <li class="leaf"><a href="/sales_invoices">Sales</a></li>
         </ul>

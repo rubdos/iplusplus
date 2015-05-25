@@ -3,6 +3,7 @@
 #include <application.hpp>
 #include "controllers/home.hpp"
 #include "controllers/customer.hpp"
+#include "controllers/sales_invoice.hpp"
 
 #include "models/customer.hpp"
 #include "models/sales_invoice.hpp"
@@ -21,6 +22,7 @@ public:
         // Register all controllers
         register_controller<home_controller>();
         register_controller<customer_controller>();
+        register_controller<sales_invoice_controller>();
 
         // Register all models
         customer::create_tables(true);

@@ -1,8 +1,8 @@
 <tr>
-    <td><a href="/customers/#ID#">#ID#</a></td>
-    <td><a href="/customers/#ID#">#NAME#</a></td>
-    <td><a href="/customers/#ID#">#FIRST NAME#</a></td>
-    <td><a href="/customers/#ID#">#COMPANY#</a></td>
+    <td><a href="/customers/view/#ID#">#ID#</a></td>
+    <td><a href="/customers/view/#ID#">#NAME#</a></td>
+    <td><a href="/customers/view/#ID#">#FIRST NAME#</a></td>
+    <td><a href="/customers/view/#ID#">#COMPANY#</a></td>
     <td><a href="mailto:#EMAIL#">#EMAIL#</a></td>
     <td>#VAT#</td>
 </tr>

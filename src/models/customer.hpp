@@ -16,6 +16,7 @@ public:
         return _first_name + " " + _last_name;
     }
     std::shared_ptr<sales_invoice> create_invoice();
+    static std::vector<std::shared_ptr<customer>> search(std::string query);
     
 private:
     std::string _first_name;
